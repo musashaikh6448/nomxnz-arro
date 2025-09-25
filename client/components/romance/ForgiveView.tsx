@@ -14,15 +14,22 @@ export default function ForgiveView({ onBack }: { onBack: () => void }) {
       </p>
       <p className="text-right w-full pr-4 font-semibold text-rose-700">— Yours always, Noman 💖</p>
 
+      {/* Image Grid */}
       <div className="mt-2 grid w-full grid-cols-2 gap-3 sm:grid-cols-3">
         {images.map((src, i) => (
-          <img key={i} src={src} alt="Our memory" className="h-28 w-full rounded-xl object-cover shadow md:h-36" />
+          <img
+            key={i}
+            src={src}
+            alt="Our memory"
+            className="h-28 w-full rounded-xl object-cover shadow md:h-36"
+          />
         ))}
       </div>
 
+      {/* Buttons */}
       <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
         <a
-          href={"https://wa.me/?text=" + encodeURIComponent("Arro, thank you for forgiving me. Let’s begin again — Noman")}
+          href="https://www.instagram.com/_nomxnz_/"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-rose-600 px-5 py-2.5 font-medium text-white shadow-md hover:bg-rose-500 focus:outline-none focus:ring-2 focus:ring-rose-300"
@@ -37,7 +44,7 @@ export default function ForgiveView({ onBack }: { onBack: () => void }) {
         </button>
       </div>
 
-      {/* Hearts fireworks */}
+      {/* Hearts/Fireworks Effect */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         {Array.from({ length: 30 }).map((_, i) => (
           <span
@@ -64,7 +71,11 @@ export default function ForgiveView({ onBack }: { onBack: () => void }) {
           </span>
         ))}
         {Array.from({ length: 20 }).map((_, i) => (
-          <span key={`sp-${i}`} className="absolute text-rose-300/60 animate-twinkle" style={{ left: `${(i * 5 + 3) % 100}%`, top: `${(i * 6 + 9) % 100}%` }}>
+          <span
+            key={`sp-${i}`}
+            className="absolute text-rose-300/60 animate-twinkle"
+            style={{ left: `${(i * 5 + 3) % 100}%`, top: `${(i * 6 + 9) % 100}%` }}
+          >
             <Sparkles className="size-4" />
           </span>
         ))}
@@ -73,11 +84,12 @@ export default function ForgiveView({ onBack }: { onBack: () => void }) {
   );
 }
 
+// Image URLs (unchanged)
 const images = [
-  "https://images.unsplash.com/photo-1525338078858-d762b5e32f86?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1505322022206-c3f3d1a3bb0f?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=800&auto=format&fit=crop",
+  "https://mistralaichatupprodswe.blob.core.windows.net/chat-images/a7/56/73/a7567319-41df-466f-93eb-faa8dbe42871/61c098ce-a749-4174-8cfe-6468cfd12881/8da3fca4-3694-4146-878d-9907dd31bcbd?sv=2025-01-05&st=2025-09-25T19%3A49%3A36Z&se=2025-09-25T20%3A49%3A36Z&sr=b&sp=rade&sig=iy4uBWOgmg8axELw7RNNGvu9qo1JyfVRJJjfmwaKFiM%3D",
+  "https://mistralaichatupprodswe.blob.core.windows.net/chat-images/a7/56/73/a7567319-41df-466f-93eb-faa8dbe42871/61c098ce-a749-4174-8cfe-6468cfd12881/92535f90-4dd8-4fe4-b251-da9533c63702?sv=2025-01-05&st=2025-09-25T19%3A49%3A36Z&se=2025-09-25T20%3A49%3A36Z&sr=b&sp=rade&sig=vjnVYIKiUkd6yYjqO6g1x5xz0%2F7s7gzhJM3t8%2FJvQr0%3D",
+  "https://mistralaichatupprodswe.blob.core.windows.net/chat-images/a7/56/73/a7567319-41df-466f-93eb-faa8dbe42871/61c098ce-a749-4174-8cfe-6468cfd12881/63133285-5369-4204-a4ee-e632586ce1c5?sv=2025-01-05&st=2025-09-25T19%3A49%3A36Z&se=2025-09-25T20%3A49%3A36Z&sr=b&sp=rade&sig=iwufwaEw1VqvJah%2FHx%2BxKxxGtGa39qXLib%2BLq52eUVY%3D",
+  "https://mistralaichatupprodswe.blob.core.windows.net/chat-images/a7/56/73/a7567319-41df-466f-93eb-faa8dbe42871/61c098ce-a749-4174-8cfe-6468cfd12881/60814ff0-bfb0-4302-8d02-6fcadd01eecf?sv=2025-01-05&st=2025-09-25T19%3A49%3A36Z&se=2025-09-25T20%3A49%3A36Z&sr=b&sp=rade&sig=7cp8fpVkeapYjqhWWPLNfKWpijYRb3EAXBVeeCXS8ho%3D",
+  "https://mistralaichatupprodswe.blob.core.windows.net/chat-images/a7/56/73/a7567319-41df-466f-93eb-faa8dbe42871/61c098ce-a749-4174-8cfe-6468cfd12881/5002452c-a019-45ed-bf3a-28a136818b2d?sv=2025-01-05&st=2025-09-25T19%3A49%3A36Z&se=2025-09-25T20%3A49%3A36Z&sr=b&sp=rade&sig=rI2XGeKck9Wv0E7zwR7TJaAn%2F1ApFebkMh%2FnUCL5ljk%3D",
+  "https://mistralaichatupprodswe.blob.core.windows.net/chat-images/a7/56/73/a7567319-41df-466f-93eb-faa8dbe42871/61c098ce-a749-4174-8cfe-6468cfd12881/3a009c37-1c82-4a7f-b52b-47c90c334f7f?sv=2025-01-05&st=2025-09-25T19%3A49%3A36Z&se=2025-09-25T20%3A49%3A36Z&sr=b&sp=rade&sig=fhb1Kn6bWW1YYln8uTavC33IpBYtMlzGC%2BiDwR9F4QI%3D",
 ];
